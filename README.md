@@ -30,30 +30,55 @@ git push
 #### firebase
 - make a firebase project at https://console.firebase.google.com/
 ```bash
-firebase login
-firebase init
-firebase deploy
+$ firebase login
+$ firebase init
+$ firebase deploy
 ```
 - check out deployed webapp here:
 https://hahyun-kim-blog.web.app/
 
 ##### fly.io
 - install fly.io https://fly.io/docs/hands-on/install-flyctl/
-```bash
-# Linux
-$ curl -L https://fly.io/install.sh | sh
-```
-```bash
-$ tail  -n 3  ~/.zshrc # use your shell
-# fly.io
-export FLYCTL_INSTALL="/home/user1/.fly" # use your username
-export PATH="$FLYCTL_INSTALL/bin:$PATH"
-```
-- login and launch(deploy)
-```bash
-flyctl auth login
-flyctl launch
-```
+        ```bash
+        # Linux
+        $ curl -L https://fly.io/install.sh | sh
+        ```
+        ```bash
+        $ tail  -n 3  ~/.zshrc # use your shell
+        # fly.io
+        export FLYCTL_INSTALL="/home/user1/.fly" # use your username
+        export PATH="$FLYCTL_INSTALL/bin:$PATH"
+        ```
+- login and launch
+        ```bash
+        $ flyctl auth login
+        $ flyctl launch
+        ```
+        ```bash
+        $ cat Dockerfile
+        FROM httpd:2.4
+        COPY . /usr/local/apache2/htdocs/
+        ```
+        ```bash
+        $ tail -n 13  fly.toml
+        app = "hxhkim" # your app name
+        primary_region = "nrt" # Tokyo, Japan (nrt)
+        
+        [build]
+          dockerfile = "Dockerfile"
+        
+        [http_service]
+          internal_port = 80
+          force_https = true
+          auto_stop_machines = true
+          auto_start_machines = true
+          min_machines_running = 3
+          processes = ["app"]
+        ```
+- deploy
+        ```bash
+        $ fly deploy
+        ```
 - go to fly.io and check out webapp:
 https://hahyun-blog.fly.dev/
 
