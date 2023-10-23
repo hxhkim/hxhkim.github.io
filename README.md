@@ -51,6 +51,7 @@ export PATH="$FLYCTL_INSTALL/bin:$PATH"
 ```
 - login and launch
 ```bash
+$ fly auth login
 $ flyctl auth login
 $ flyctl launch
 ```
