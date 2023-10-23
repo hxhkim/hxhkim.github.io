@@ -6,17 +6,17 @@ View at:
 - https://hahyun-kim-blog.web.app/
 - https://hahyun-blog.fly.dev/
 
+-------------------------------------------------------
 
-
-### DEV
+## DEV
 ```bash
 git clone ...
 ```
 
+-------------------------------------------------------
 
-
-### DEPLOY
-#### github pages
+## DEPLOY
+### github pages
 ```bash
 $ git add .
 $ git commit -m "..."
@@ -27,7 +27,7 @@ $ git push
 - go to Pages
 - Deploy
 
-#### firebase
+### firebase
 - make a firebase project at https://console.firebase.google.com/
 ```bash
 $ firebase login
@@ -37,7 +37,7 @@ $ firebase deploy
 - check out deployed webapp here:
 https://hahyun-kim-blog.web.app/
 
-##### fly.io
+#### fly.io
 - install fly.io https://fly.io/docs/hands-on/install-flyctl/
 ```bash
 # Linux
@@ -82,10 +82,9 @@ $ fly deploy
 - go to fly.io and check out webapp:
 https://hahyun-blog.fly.dev/
 
+-------------------------------------------------------
 
-
-
-### DESIGN LICENSE
+## DESIGN LICENSE
 Phantom by HTML5 UP
 html5up.net | @ajlkn
 Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
