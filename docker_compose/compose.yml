@@ -34,5 +34,5 @@ services:
     expose:
       - "80"
     environment:
-      - VIRTUAL_HOST=jjblog.com
+      - VIRTUAL_HOST=jhblog.com
       - VIRTUAL_PORT=80
