@@ -29,7 +29,7 @@ services:
       resources:  # https://docs.docker.com/compose/compose-file/compose-file-v3/#resources
         limits:
           cpus: '0.05'
-          memory: 10M
+          memory: 20M
         reservations:
           cpus: '0.01'
           memory: 6M
