@@ -11,28 +11,28 @@ services:
   ig-blog:
     image: aaingyunii/aaingyunii.github.io
     expose:
-      - "8000"
+      - "80"
     environment:
       - VIRTUAL_HOST=igblog.com
-      - VIRTUAL_PORT=8000
+      - VIRTUAL_PORT=80
   hh-blog:
     image: hahyunkim/hxhkim.github.io:1.4.0
     expose:
-      - "8000"
+      - "80"
     environment:
       - VIRTUAL_HOST=hhblog.com
-      - VIRTUAL_PORT=8000
+      - VIRTUAL_PORT=80
   js-blog:
     image: juseonlee/assomdevgit.github.io:1.4.0
     expose:
-      - "8000"
+      - "80"
     environment:
       - VIRTUAL_HOST=jsblog.com
-      - VIRTUAL_PORT=8000
+      - VIRTUAL_PORT=80
   jh-blog:
     image: mato94/shims94.github.io:1.4.0
     expose:
-      - "8000"
+      - "80"
     environment:
       - VIRTUAL_HOST=jjblog.com
-      - VIRTUAL_PORT=8000
+      - VIRTUAL_PORT=80
