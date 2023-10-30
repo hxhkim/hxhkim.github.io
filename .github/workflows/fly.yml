@@ -1,8 +1,5 @@
 name: Fly Deploy
-on:
-  push:
-    branches:
-      - main
+on: [push]
 env:
   FLY_API_TOKEN: ${{ secrets.FLY_API_TOKEN }}
 jobs:
@@ -10,6 +7,6 @@ jobs:
       name: Deploy app
       runs-on: ubuntu-latest
       steps:
-        - uses: actions/checkout@v2 # checkout repository
+        - uses: actions/checkout@v4 # checkout repository
         - uses: superfly/flyctl-actions/setup-flyctl@master # use flyio https://github.com/superfly/flyctl-actions/tree/master
         - run: flyctl deploy
