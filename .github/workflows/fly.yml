@@ -10,6 +10,6 @@ jobs:
       name: Deploy app
       runs-on: ubuntu-latest
       steps:
-        - uses: actions/checkout@v2 # checkout repository
+        - uses: actions/checkout@v4 # checkout repository
         - uses: superfly/flyctl-actions/setup-flyctl@master # use flyio https://github.com/superfly/flyctl-actions/tree/master
         - run: flyctl deploy
